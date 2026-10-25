@@ -1,0 +1,6 @@
+(require :asdf)
+(asdf:load-system "cl-interpol")
+(cl-interpol:enable-interpol-syntax)
+(let ((name "EGCL")) (assert (string= #?"Hello, ${name}!" "Hello, EGCL!")))
+(cl-interpol:disable-interpol-syntax)
+(format t "EGCL cl-interpol smoke passed.~%")
